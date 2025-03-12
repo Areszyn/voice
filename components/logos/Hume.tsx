@@ -1,9 +1,12 @@
-const Hume = () => {
-  return (
-    <div>
-      <img src="https://github.com/Areszyn/voice/raw/main/waspros.png" alt="Waspros Logo" width={200} />
-    </div>
-  );
+import React from 'react';
+import logo from '../logos/waspros.png'; // Adjust path if needed
+
+interface HumeLogoProps {
+  className?: string;
+}
+
+const HumeLogo: React.FC<HumeLogoProps> = ({ className }) => {
+  return <img src={logo} alt="Waspros Logo" className={className} />;
 };
 
-export default Hume;
+export default HumeLogo;
