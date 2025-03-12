@@ -14,8 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <Head>
-        <meta name="monetag" 
-          content="6c390819b6af56a65b7afa261d811540" />
+        <meta name="monetag" content="6c390819b6af56a65b7afa261d811540">
       </Head>
       <body className={cn(GeistSans.variable, GeistMono.variable, "flex flex-col min-h-screen")}>
         <Nav />
