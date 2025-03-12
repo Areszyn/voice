@@ -1,12 +1,15 @@
-import React from 'react';
-import logo from '../logos/waspros.png'; // Adjust path if needed
+import type { FC, ImgHTMLAttributes } from "react";
 
-interface HumeLogoProps {
-  className?: string;
+export type WasprosLogoProps = ImgHTMLAttributes<HTMLImageElement>;
+
+export default function WasprosLogo(props: WasprosLogoProps) {
+  return (
+    <img
+      src="/waspros.png" // Ensure waspros.png is in the public folder
+      alt="Waspros Logo"
+      width="106"
+      height="25"
+      {...props}
+    />
+  );
 }
-
-const HumeLogo: React.FC<HumeLogoProps> = ({ className }) => {
-  return <img src={logo} alt="Waspros Logo" className={className} />;
-};
-
-export default HumeLogo;
