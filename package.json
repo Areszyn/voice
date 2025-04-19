@@ -2,7 +2,7 @@
   "name": "Areszyn Waspros Voice",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Areszyn/voice",
+  "homepage": "https://github.com/github",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
