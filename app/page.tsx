@@ -1,5 +1,6 @@
 import { getHumeAccessToken } from "@/utils/getHumeAccessToken";
 import dynamic from "next/dynamic";
+import DonationSection from "@/components/DonationSection"; // <-- Add this line
 
 const Chat = dynamic(() => import("@/components/Chat"), {
   ssr: false,
@@ -13,8 +14,11 @@ export default async function Page() {
   }
 
   return (
-    <div className={"grow flex flex-col"}>
+    <div className="grow flex flex-col">
       <Chat accessToken={accessToken} />
+
+      {/* Add Donation Section below Chat */}
+      <DonationSection />
     </div>
   );
 }
