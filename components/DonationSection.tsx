@@ -2,9 +2,8 @@
 
 import { useEffect } from "react";
 
-const DonationSection: React.FC = () => {
+const DonationSection = () => {
   useEffect(() => {
-    // Ko-fi widget script
     const script = document.createElement("script");
     script.src = "https://storage.ko-fi.com/cdn/scripts/overlay-widget.js";
     script.async = true;
@@ -27,26 +26,23 @@ const DonationSection: React.FC = () => {
   return (
     <div
       style={{
-        marginTop: "2rem",
-        display: "flex",
-        justifyContent: "center",
-        width: "100%",
+        position: "fixed",
+        bottom: "90px",
+        left: "20px",
+        zIndex: 1000,
       }}
     >
-      <iframe
-        src="https://nowpayments.io/embeds/donation-widget?api_key=93H6N7Y-V304Y6S-H3E3M38-2SEWBQZ"
-        width="346"
-        height="623"
-        frameBorder="0"
-        scrolling="no"
-        style={{
-          overflowY: "hidden",
-          border: "none",
-        }}
-        title="NOWPayments Donation"
+      <a
+        href="https://nowpayments.io/donation?api_key=93H6N7Y-V304Y6S-H3E3M38-2SEWBQZ"
+        target="_blank"
+        rel="noreferrer noopener"
       >
-        Can't load widget
-      </iframe>
+        <img
+          src="https://nowpayments.io/images/embeds/donation-button-black.svg"
+          alt="Crypto donation button by NOWPayments"
+          width={180}
+        />
+      </a>
     </div>
   );
 };
